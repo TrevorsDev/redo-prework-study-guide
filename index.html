@@ -1,22 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prework Study Guide</title>
-  </head>
-  <body>
-    <header id="top">
-      <h1>Prework Study Guide</h1>
-      <img src="./assets/bowtie-cat.png" alt="Profile image of cat wearing a bow tie." />
-    </header>
-    <main>
-      <!-- Student code goes here -->
-    </main>
 
-    <footer>
-      <p>I can code!</p>
-    </footer>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prework Study Guide</title>
+</head>
+
+<body>
+  <header id="top">
+    <h1>Prework Study Guide</h1>
+    <img src="./assets/bowtie-cat.png" alt="Profile image of cat wearing a bow tie." />
+  </header>
+  <main>
+    <section class="card" id="html-section">
+      <h2 class="giveSpace">HTML</h2>
+      <h3>Attributes</h3>
+      <ul>
+        <li>HTML attributes are additional values used to identify elements for CSS and Javascript, and to configure the
+          behavior or display of an HTML element.</li>
+        <li>They are placed inside the element's opening tag and consist of two parts: a name and a value.</li>
+      </ul>
+      <ul>
+        <li>Avoiding nesting lists deeper than three levels is a good rule of thumb</li>
+      </ul>
+    </section>
+
+    <section class="card" id="css-section">
+
+    </section>
+
+    <section class="card" id="git-section">
+      <h2 class="giveSpace">Git, CLI, SSH, and GitHub</h2>
+      <ul>
+        <h3>What is Git?</h3>
+        <li>Git is a version control system that stores your code and its history, as well as separate versions of the
+          code.</li>
+        <li>It allows you to create "save points" (called commits) of your work. It's good practice to
+          commit your work whenever you reach a good stopping point. This creates a history of changes and allows you to
+          revert to an earlier version if necessary.</li>
+        <h3>CLI</h3>
+        <ul>
+          <li>How to navigate through directories and files, create a new folder</li>
+          <li>the <b>ls</b> command will allow us to see a list of files within our current directory</li>
+          <li>The <b>pwd</b> (print working directory) will print the current directory to the terminal</li>
+          <li>The <b>cd</b> command allows us to change directories <b>cd ..</b> will allow us to navigate backwards one
+            directory at a time.
+            and <b>cd .</b> will move you forward in a directory</li>
+          <li>Command <b>mkdir</b> will create a new directory to store files in. Ex: /Users/<username>/<b>bootcamp</b>
+          </li>
+          <li>The <b>touch </b>command will create a new file inside the current directory. Ex: <b>index.html</b> inside
+            <b>bootcamp</b> directory.
+          </li>
+        </ul>
+
+        <h3>SSH Keys</h3>
+        <a
+          href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys">Do
+          you have SSH keys? - GitHub</a>
+        <h4>How to Check</h4>
+        <ul>
+          <li>Enter <b>ls -al ~/.ssh</b> in terminal. Look for a public SSH key that ends in <b>.pub</b>.Ex:
+            <b>id_ed25519.pub</b>
+          </li>
+          <li>If an "error" occurs, you need ot generate a new SSH key pair</li>
+        </ul>
+        <h4>Generating an SSH Key</h4>
+        <a
+          href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key">Generating
+          a New SSH Key</a> - GitHub
+        <ul>
+          <li>Heres a Steps Summary</li>
+          <ol>
+            <li>Enter <b>ssh-keygen -t ed25519 -C “your_email@example.com”</b> in your terminal to create a new SSH key.
+            </li>
+            <li>When prompted, save your key in the default file location and create a secure passphrase.</li>
+          </ol>
+        </ul>
+
+        <h4>Adding the New SSH Key to the ssh-agent</h4>
+        <p>Once you have your SSH keys, you can add them to the ssh-agent by reading <a
+            href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent">How
+            to Add SSH Key to ssh-agent - GitHub</a>. The <b>ssh-agent</b> is a program that keeps track of a user's
+          identity keys and passphrases.
+        </p>
+        <ul>
+          <li>Heres a Steps Summary</li>
+          <ol>
+            <li>Enter <b>eval “$(ssh-agent -s)”</b> in your terminal to start the ssh-agent.</li>
+            <li>Add your private SSH key to the <b>ssh-agent</b> using the <b>ssh-add</b> command.</li>
+          </ol>
+        </ul>
+
+        <h4>Add the SSH Key to GitHub</h4>
+        <p>Read <a
+            href="https://docs.github.com/en/get-started/getting-started-with-git/setting-your-username-in-git#setting-your-git-username-for-every-repository-on-your-computer">
+            this article</a> on how to set your Git username for every repository on your computer - GitHub</p>
+        <ul>
+          <p>You can add your newly generated SSH key to your GitHub account by reading <a
+              href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">
+              this GitHub article</a></p>
+          <li>Heres a Steps Summary</li>
+        </ul>
+        <ol>
+          <li>Copy the public SSH key to your clipboard. Be sure not to copy anything else after this point so that your
+            SSH key stays on your clipboard!</li>
+          <li>Navigate to the GitHub website and log in to your account.</li>
+          <li>Click on Settings, and then click on SSH and GPG keys.</li>
+          <li>Add your SSH key.</li>
+        </ol>
+
+        <h4>Set Your Git Username for Every Repository on Your Computer</h4>
+        <ul>
+          <li>Git uses a username to associate any commits, or changes, to your code with an identity. The Git username
+            is different from your GitHub username.</li>
+          <li>You can change the name that's associated with your Git commits using the <b>git config</b> command.</li>
+          <li> Changing the name associated with your Git commits using git config will only affect future commits and
+            will not change the name used for past commits.</li>
+        </ul>
+
+        <h4>Did you Connect it Successfully?</h4>
+        <ul>
+          <li>To test if you've set up your SSH connection correctly, enter <b>ssh -T git@github.com</b> into your
+            terminal.</li>
+          <li>Verify that the fingerprint in the message matches the GitHub’s RSA public key fingerprint. If yes, you're
+            connected.</li>
+        </ul>
+
+        <h3>Git Flow</h3>
+        <h4>Version Control</h4>
+        <p>What is version control?</p>
+        <ul>
+          <li>Version control is the practice of tracking changes to our code. With tracking, if we make changes to our
+            code and decide that we don’t want to keep them or that they have a bug, we can easily revert to an earlier
+            version of the code. Version control also makes our code more forgiving to mistakes because we can easily
+            access and restore past versions.</li>
+          <li>How to Practice Version Control</li>
+          <ol>
+            <li>Inspect the workflow or code in concern:</li>
+            <li>Identify where the bug happened in the workflow.</li>
+            <li>dentify the SHA of the version the team should revert to so that they can make a fix and complete the
+              <b>git revert</b> command.
+            </li>
+          </ol>
+          <li>An SHA, or hash, is actually a long string of numbers or letters, like this:
+            "e0eaed45609ae40ada29664384e679ada5d5004a." However, when using the SHA to access a version of their code,
+            developers often type out only the first seven numbers or letters.</li>
+        </ul>
+        <ul>
+
+          <h4>Creating a GitHub Repository with a README File</h4>
+          <ol>
+            <li>Log into GitHub account</li>
+            <li>Click the plus sign in the top bar next to your profile picture.</li>
+            <li>Select "New Repository" from the dropdown menu.</li>
+            <li>Give the repository a name. Ex: <b>prework-study-guide</b>. Remember these when naming:</li>
+            <ul>
+              <li>Be unique and descriptive for each repository name.</li>
+              <li>Use all lowercase letters.</li>
+              <li>Use dashes; we can't have spaces in our repository names, so we use dashes instead.</li>
+              <li>Be consistent! Our GitHub account will follow us throughout our web development career.</li>
+            </ul>
+            <li>Add a description to your repository. Be concise and clear with your project descriptions.</li>
+            <li>Select our repository to be public or private</li>
+            <li>Add a README file.</li>
+            <li>Give your repo a license, or not...</li>
+          </ol>
+
+          <h4>GitHub Issues and Markedown</h4>
+          <p>GitHub offers a task management tool called GitHub issues, which gives developers and teams an easy way to
+            keep track of key tasks and progress. Its like a to-do list.</p>
+          <p>Issues help teams:</p>
+          <ul>
+            <li>Track, organize, and communicate ideas, tasks, bugs, and enhancements.</li>
+            <li>Identify bottlenecks or blockers that could prevent work progress.</li>
+            <li>Avoid duplicating work by assigning tasks or issues.</li>
+          </ul>
+          <li>Follow the git flow steps to add, commit, and push our work to our feature branch.</li>
+          <li>Then we open a pull request with my feature branch as the comparison branch and the default branch as the
+            base branch, merge changes with the main branch, and close the associated GitHub issue.</li>
+        </ul>
+
+        <h4>Git, and Git Commands</h4>
+        <p>Git is the most widely used version control system, enabling tracking of changes to files and easier collaboration among multiple users.</p>
+        <li><b>Git status</b>: checks what branch we are currently on </li>
+        <li>The <b>git</b> command must precede every Git statement.</li>
+        <li>The <b>checkout</b> command is to move the working branch to a new branch.</li>
+        <li><b>Git checkout -b branch-name</b>: creates a new branch and switches to it. </li>
+        <li>The "branch name", ex: 'feature/starter-code' is the name of the new branch. We have added the prefix,
+          feature, to indicate that it is a feature. It is good practice to name the branches for the feature that will
+          be developed by them to help indicate the purpose of each branch.</li>
+        <li>To code to the current working branch, ex: 'feature/starter-code', we'll need to do the
+          following:</li>
+        <ul>
+          <li><b>git add -A</b></li>
+          <ul>
+            <li>The add command adds modifications in the current working branch to the staging area.</li>
+            <li>The <b>-A</b> flag indicates that we want to add all changes.</li>
+          </ul>
+          <li>Now that we have staged those files to be committed, let’s enter the git commit command with a commit
+            message that describes what the commit contains. Ex:</li>
+          <ul>
+            <li><b>git commit -m "add starter code"</b></li>
+          </ul>
+          <li>Before we push this up to our repo, we should double-check if our local branch is in sync with the base
+            branch in GitHub. So let’s pull down any changes from the base branch.:</li>
+          <ul>
+            <li><b>git pull origin main</b></li>
+          </ul>
+        </ul>
+        <li>In Git, a commit is a snapshot of the changes made to the codebase at a specific point in time. A commit is
+          a permanent and unchangeable record of the changes made to the codebase. A commit represents a single point in
+          the history of the codebase.A stage, on the other hand, is a temporary holding area for changes that have been
+          made to the codebase, but have not yet been committed. When you stage changes in Git, you are preparing them
+          for a commit, but you have not yet made the commit. This allows you to review your changes and make sure they
+          are correct before committing them.You can think of a commit as a final version of the changes and a stage as
+          a draft version of the changes.</li>
+
+      </ul>
+    </section>
+
+    <section class="card" id="javascript-section">
+
+    </section>
+  </main>
+
+  <footer>
+    <p>I can code!</p>
+  </footer>
+</body>
+
 </html>
